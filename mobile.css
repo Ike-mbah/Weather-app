@@ -1,0 +1,268 @@
+/* Mobile Devices (Phones) */
+@media (max-width: 768px) {
+  section {
+    padding: 1.5rem 1.8rem; /* More compact padding */
+    max-width: 100%;
+  }
+
+  .logo img {
+    width: 60%; /* Smaller logo */
+    margin-top: 0.5rem;
+  }
+
+  .content {
+    margin-top: 2.8rem;
+  }
+
+  .content h3 {
+    font-size: 3.1rem; /* Smaller headline */
+    line-height: 1.2;
+    font-family: "Bricolage Grotesque";
+    margin-bottom: 2.8rem;
+  }
+
+  .unit-dropdown {
+    top: 120%;
+  }
+
+  .input-search {
+    width: 100%; /* Wider search bar for thumbs */
+    padding: 0.4rem 0;
+    padding-left: 3.5rem;
+    font-size: 1.1rem;
+    border-radius: 0.8rem;
+  }
+
+  .input-search::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .search-dropdown,
+  .search-loading {
+    left: 1%; /* Align with the wider search bar */
+    top: 84%;
+    width: 100%;
+  }
+
+  .icon-search {
+    left: 7%;
+    top: 70.3%; /* Re-position icon inside input */
+    width: 1.2rem;
+  }
+
+  .button-search {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.7rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 0;
+    border-radius: 0.8rem;
+  }
+
+  /* 2. Stack the Main Cards */
+  .container {
+    flex-direction: column; /* Stack Large card and Hourly forecast */
+    gap: 2rem;
+  }
+
+  .large-img {
+    max-width: 100%; /* Full width for the large image */
+    height: auto;
+    border-radius: 0.8rem;
+  }
+
+  .loading-overlay {
+    width: 100%;
+    height: 27%;
+    top: -1%;
+    /* left: -0.9%; */
+  }
+  /* 3. Main Today Card Alignment */
+  .large-img-text {
+    flex-direction: column;
+    left: 5%;
+    gap: 0;
+    top: 1%;
+  }
+
+  .img-text-1 {
+    text-align: center; /* Smaller date text */
+  }
+
+  .img-text-1 h3 {
+    font-size: 1.8rem;
+  }
+
+  .img-text-1 p {
+    font-size: 1rem;
+    margin-top: -0.7rem;
+  }
+
+  .img-text-2 {
+    margin-top: -1.5rem;
+    /* justify-content: space-between; */
+    gap: 1rem;
+  }
+
+  .img-text-2 h1 {
+    font-size: 5rem;
+  }
+
+  .img-text-2 img {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  /* 4. Forecast Grid (2x2) */
+  .card-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two items per row */
+    gap: 0.8rem;
+  }
+
+  .card-forecast {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+  /* 5. Daily Forecast  */
+  .daily-forecast-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Show 3 cards at a time */
+    gap: 0.8rem;
+  }
+
+  .hourly-forecast {
+    justify-content: space-between;
+  }
+
+  .hourly-forecast h4 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 393px) and (max-width: 500px) {
+  /* Add rules specific to devices between 393px and 500px */
+
+  .input-search {
+    padding-left: 3.8rem;
+  }
+
+  .button-search {
+    width: 100%;
+  }
+
+  .icon-search {
+    left: 7%;
+    top: 64.2%;
+    width: 1.2rem;
+  }
+
+  .search-dropdown,
+  .search-loading {
+    left: 0.1%;
+    top: 84%;
+    width: 100%;
+  }
+
+  .large-img-text {
+    flex-direction: column;
+    left: 10%;
+    gap: 0;
+    top: 1%;
+  }
+
+  .loading-overlay {
+    left: -1%;
+    top: -1%;
+    height: 29%;
+  }
+}
+
+@media (max-width: 320px) and (max-width: 393px) {
+  section {
+    padding: 1rem 1rem;
+  }
+
+  .logo img {
+    width: 50%;
+  }
+
+  .units {
+    padding: 0.4rem 0.7rem;
+  }
+
+  #imperial,
+  .unchecked,
+  .unit-checked {
+    padding: 0.4rem;
+  }
+
+  .content h3 {
+    font-size: 3rem;
+  }
+
+  .input-search {
+    padding: 0.8rem 0;
+    padding-left: 3.5rem;
+  }
+
+  .icon-search {
+    left: 7%;
+    top: 71.3%;
+    width: 1.2rem;
+  }
+
+  .button-search {
+    padding: 0.7rem 0;
+  }
+
+  .search-dropdown {
+    left: 0.1%;
+    top: 85%;
+    width: 100%;
+  }
+
+  .search-dropdown a {
+    padding: 0.7rem 0 0.7rem 0.6rem;
+  }
+
+  .search-loading {
+    left: 0.1%;
+    top: 84%;
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+  }
+
+  .large-img-text {
+    flex-direction: column;
+    left: 2%;
+    gap: 0;
+    top: 5%;
+  }
+
+  .img-text-1 h3 {
+    margin-bottom: 1rem;
+  }
+
+  .img-text-1 {
+    margin-bottom: 1.3rem;
+  }
+
+  .card-forecast {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+
+  .card-forecast h5 {
+    margin-bottom: 1rem;
+  }
+
+  .days-dropdown p {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .loading-overlay {
+    height: 26%;
+  }
+}

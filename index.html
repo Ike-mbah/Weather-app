@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=League+Spartan:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=League+Spartan:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mobile.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Weather app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <section>
+    <header class="head">
+      <div class="logo">
+        <img src="./assets/images/logo.svg" alt="logo" />
+      </div>
+      <div class="units">
+        <img src="./assets/images/icon-units.svg" alt="icon-units" />
+        <p>Units</p>
+        <img
+          src="./assets/images/icon-dropdown.svg"
+          alt="icon-dropdown"
+          class="icon-dropdown"
+        />
+      </div>
+
+      <div class="unit-dropdown">
+        <a href="#" class="unit-head" id="imperial">Switch to Imperial</a>
+        <span class="unit-body unchecked">Temperature</span>
+
+        <div class="unit-checked">
+          <a href="#" class="unit-head">Celsius (C&deg;)</a>
+          <img
+            src="./assets/images/icon-checkmark.svg"
+            alt="icon-checkmark"
+            class="default-img"
+          />
+        </div>
+
+        <div class="hr-line">
+          <div class="imperial-type">
+            <a href="#" class="unit-head hover-check">Fahrenheit (F&deg;)</a>
+            <img
+              src="./assets/images/icon-checkmark.svg"
+              alt="icon-checkmark"
+              class="imperial-img"
+            />
+          </div>
+        </div>
+
+        <span class="unit-body unchecked">Wind Speed</span>
+
+        <div class="unit-checked">
+          <a href="#" class="unit-head">Km/h</a>
+          <img
+            src="./assets/images/icon-checkmark.svg"
+            alt="icon-checkmark"
+            class="default-img"
+          />
+        </div>
+
+        <div class="hr-line">
+          <div class="imperial-type">
+            <a href="#" class="unit-head hover-check">mph</a>
+            <img
+              src="./assets/images/icon-checkmark.svg"
+              alt="icon-checkmark"
+              class="imperial-img"
+            />
+          </div>
+        </div>
+
+        <span class="unit-body unchecked">Precipitation</span>
+
+        <div class="unit-checked">
+          <a href="#" class="unit-head">Milimeters (mm)</a>
+          <img
+            src="./assets/images/icon-checkmark.svg"
+            alt="icon-checkmark"
+            class="default-img"
+          />
+        </div>
+
+        <div class="imperial-type">
+          <a href="#" class="unit-head hover-check">Inches (In)</a>
+          <img
+            src="./assets/images/icon-checkmark.svg"
+            alt="icon-checkmark"
+            class="imperial-img"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- FOR THE WHOLE CONTENT -->
+    <div class="whole-content">
+      <div class="content">
+        <h3>How's the sky looking today?</h3>
+        <label for="">
+          <img
+            src="./assets/images/icon-search.svg"
+            alt="icon-search"
+            class="icon-search"
+          />
+          <input
+            type="text"
+            class="input-search"
+            placeholder="Search for a place..."
+          />
+
+          <div class="search-dropdown">
+            <a href="#">City Name</a>
+            <a href="#">City Name</a>
+            <a href="#">City Name</a>
+            <a href="#">City Name</a>
+          </div>
+
+          <div class="search-loading">
+            <img
+              src="./assets/images/icon-loading.svg"
+              alt="icon-loading"
+              class="icon-loading"
+            />
+            <p>Search in progress</p>
+          </div>
+
+          <button class="button-search">Search</button>
+        </label>
+      </div>
+
+      <div class="whole-content-1">
+        <div class="container">
+          <div class="card">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="./assets/images/bg-today-small.svg"
+              />
+              <img
+                src="./assets/images/bg-today-large.svg"
+                alt="bg-today-large"
+                class="large-img"
+              />
+            </picture>
+
+            <div class="large-img-text">
+              <div class="img-text-1">
+                <h3>Berlin, Germany</h3>
+                <p>Tuesday, Aug 5, 2025</p>
+              </div>
+
+              <div class="img-text-2">
+                <img src="./assets/images/icon-sunny.webp" alt="icon-sunny" />
+                <h1>68&deg;</h1>
+              </div>
+            </div>
+            <div class="card-1">
+              <div class="card-forecast">
+                <h5>Feels like</h5>
+                <p>64&deg;</p>
+              </div>
+
+              <div class="card-forecast">
+                <h5>Humidity</h5>
+                <p>46%</p>
+              </div>
+
+              <div class="card-forecast">
+                <h5>Wind</h5>
+                <p>9 mph</p>
+              </div>
+
+              <div class="card-forecast">
+                <h5>Precipitation</h5>
+                <p>0 in</p>
+              </div>
+            </div>
+
+            <div class="daily-forecast">
+              <h4>Daily forecast</h4>
+              <div class="daily-forecast-1">
+                <div class="card-forecast-1">
+                  <div class="daily">
+                    <h4>Tue</h4>
+                    <img src="./assets/images/icon-rain.webp" alt="icon-rain" />
+                  </div>
+
+                  <div class="daily-1">
+                    <p>68&deg;</p>
+                    <p>57&deg;</p>
+                  </div>
+                </div>
+
+                <div class="card-forecast-1">
+                  <div class="daily">
+                    <h4>Wed</h4>
+                    <img
+                      src="./assets/images/icon-drizzle.webp"
+                      alt="icon-drizzle"
+                    />
+                  </div>
+
+                  <div class="daily-1">
+                    <p>70&deg;</p>
+                    <p>59&deg;</p>
+                  </div>
+                </div>
+
+                <div class="card-forecast-1">
+                  <div class="daily">
+                    <h4>Thu</h4>
+                    <img
+                      src="./assets/images/icon-sunny.webp"
+                      alt="icon-sunny"
+                    />
+                  </div>
+
+                  <div class="daily-1">
+                    <p>75&deg;</p>
+                    <p>57&deg;</p>
+                  </div>
+                </div>
+
+                <div class="card-forecast-1">
+                  <div class="daily">
+                    <h4>Fri</h4>
+                    <img
+                      src="./assets/images/icon-partly-cloudy.webp"
+                      alt="icon-partly-cloudy"
+                    />
+                  </div>
+
+                  <div class="daily-1">
+                    <p>77&deg;</p>
+                    <p>55&deg;</p>
+                  </div>
+                </div>
+
+                <div class="card-forecast-1">
+                  <div class="daily">
+                    <h4>Sat</h4>
+                    <img
+                      src="./assets/images/icon-storm.webp"
+                      alt="icon-storm"
+                    />
+                  </div>
+
+                  <div class="daily-1">
+                    <p>70&deg;</p>
+                    <p>59&deg;</p>
+                  </div>
+                </div>
+
+                <div class="card-forecast-1">
+                  <div class="daily">
+                    <h4>Sun</h4>
+                    <img src="./assets/images/icon-snow.webp" alt="icon-snow" />
+                  </div>
+
+                  <div class="daily-1">
+                    <p>77&deg;</p>
+                    <p>61&deg;</p>
+                  </div>
+                </div>
+
+                <div class="card-forecast-1">
+                  <div class="daily">
+                    <h4>Mon</h4>
+                    <img src="./assets/images/icon-fog.webp" alt="icon-fog" />
+                  </div>
+
+                  <div class="daily-1">
+                    <p>75&deg;</p>
+                    <p>59&deg;</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- THE LOADING OVERLAY -->
+            <div class="loading-effect">
+              <div id="loading-overlay" class="loading-overlay">
+                <div class="loader-content">
+                  <div class="dots">
+                    <span class="first"></span>
+                    <span class="second"></span>
+                    <span class="third"></span>
+                  </div>
+                  <p>Loading...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-2">
+            <div class="hourly-forecast">
+              <h4>Hourly forecast</h4>
+              <div class="units units-1">
+                <p>Monday</p>
+                <img
+                  src="./assets/images/icon-dropdown.svg"
+                  alt="icon-dropdown"
+                  class="dropdown-days"
+                />
+              </div>
+
+              <div class="days-dropdown unit-dropdown">
+                <p><a href="#" data-index="0">Monday</a></p>
+                <p><a href="#" data-index="1">Tuesday</a></p>
+                <p><a href="#" data-index="2">Wednesday</a></p>
+                <p><a href="#" data-index="3">Thursday</a></p>
+                <p><a href="#" data-index="4">Friday</a></p>
+                <p><a href="#" data-index="5">Saturday</a></p>
+                <p><a href="#" data-index="6">Sunday</a></p>
+              </div>
+            </div>
+
+            <div class="timing">
+              <div class="timing-forecast">
+                <div class="icon-forecast">
+                  <img
+                    src="./assets/images/icon-overcast.webp"
+                    alt="icon-overcast"
+                  />
+                  <h4>3 PM</h4>
+                </div>
+                <p>68&deg</p>
+              </div>
+
+              <div class="timing-forecast">
+                <div class="icon-forecast">
+                  <img
+                    src="./assets/images/icon-partly-cloudy.webp"
+                    alt="icon-partly-cloudy"
+                  />
+                  <h4>4 PM</h4>
+                </div>
+                <p>68&deg</p>
+              </div>
+
+              <div class="timing-forecast">
+                <div class="icon-forecast">
+                  <img src="./assets/images/icon-sunny.webp" alt="icon-sunny" />
+                  <h4>5 PM</h4>
+                </div>
+                <p>68&deg</p>
+              </div>
+
+              <div class="timing-forecast">
+                <div class="icon-forecast">
+                  <img
+                    src="./assets/images/icon-overcast.webp"
+                    alt="icon-overcast"
+                  />
+                  <h4>6 PM</h4>
+                </div>
+                <p>66&deg</p>
+              </div>
+
+              <div class="timing-forecast">
+                <div class="icon-forecast">
+                  <img src="./assets/images/icon-snow.webp" alt="icon-snow" />
+                  <h4>7 PM</h4>
+                </div>
+                <p>66&deg</p>
+              </div>
+
+              <div class="timing-forecast">
+                <div class="icon-forecast">
+                  <img src="./assets/images/icon-fog.webp" alt="icon-fog" />
+                  <h4>8 PM</h4>
+                </div>
+                <p>64&deg</p>
+              </div>
+
+              <div class="timing-forecast">
+                <div class="icon-forecast">
+                  <img src="./assets/images/icon-snow.webp" alt="icon-snow" />
+                  <h4>9 PM</h4>
+                </div>
+                <p>63&deg</p>
+              </div>
+
+              <div class="timing-forecast">
+                <div class="icon-forecast">
+                  <img
+                    src="./assets/images/icon-overcast.webp"
+                    alt="icon-overcast"
+                  />
+                  <h4>10 PM</h4>
+                </div>
+                <p>63&deg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE ERROR CONTENT -->
+
+    <div class="error-content">
+      <div class="error-content-1">
+        <img
+          src="./assets/images/icon-error.svg"
+          alt="icon-error"
+          class="icon-error"
+        />
+        <h3>Something went wrong</h3>
+        <p>
+          We couldnt connect to the server (API error). Please try <br />again
+          in few moments.
+        </p>
+
+        <div class="retry">
+          <button class="retry-button">
+            <img
+              src="./assets/images/icon-retry.svg"
+              alt="icon-retry"
+              class="icon-retry"
+            />
+            Retry
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-error">
+      <h3>No search result found!</h3>
+    </div>
+  </section>
+
+  <body>
+    <script src="./script.js"></script>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
